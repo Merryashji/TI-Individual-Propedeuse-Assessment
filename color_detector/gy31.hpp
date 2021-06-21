@@ -82,10 +82,10 @@ public:
     
     
     /// \brief
-    /// color_detection.
+    /// detect_color.
     /// \details
     /// this function reads 4 different values Red, Green, Blue and no color. According to these values the function returs the actual color as char.
-    char color_detection();
+    char detect_color();
 };
 
 
