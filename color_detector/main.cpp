@@ -32,7 +32,7 @@ int main( void ){
    
    while(1){
         color_leds.reset();
-        char direction = sensor.color_detection();
+        char direction = sensor.detect_color();
         color_leds.show_color(direction);
         servo_motor.move(direction);
         hwlib::wait_ms( 500 );      
