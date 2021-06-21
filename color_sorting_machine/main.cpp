@@ -23,7 +23,7 @@ int main( void ){
    auto s3 = hwlib::target::pin_out( hwlib::target::pins::d7 );
    auto sensor_out = hwlib::target::pin_in( hwlib::target::pins::d8 );
    auto sensor  = gy31( s0 , s1 , s2 , s3 , sensor_out );
-   sensor.color_detection();
+   sensor.detect_color();
    
    auto servo_1_pin = hwlib::target::pin_out( hwlib::target::pins::d9 );
    auto servo_2_pin = hwlib::target::pin_out( hwlib::target::pins::d10 );
@@ -35,7 +35,7 @@ int main( void ){
         servo_motor_top.move_servo_top1(); 
         
         hwlib::wait_ms( 500 ); 
-        char direction = sensor.color_detection();
+        char direction = sensor.detect_color();
         //hwlib::cout << direction << "\n"; 
         display << "\f" << hwlib::flush;
         if (direction == 'R'){
