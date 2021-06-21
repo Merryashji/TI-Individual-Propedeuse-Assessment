@@ -53,7 +53,7 @@ int gy31::no_color(){
 };
 
 
-char gy31::color_detection(){
+char gy31::detect_color(){
     int R = get_red_color();
     int B = get_blue_color();
     int G = get_green_color();
@@ -73,5 +73,5 @@ char gy31::color_detection(){
     }else if (R > G && R > B && G > B ){
         return 'Y'; 
     }
-    return color_detection();
+    return detect_color();
 };
